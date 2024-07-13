@@ -1,0 +1,19 @@
+.movieContainer{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.movieTile{
+    width:250px;
+    height:350px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 3px 4px 13px lightgray;
+    cursor: pointer;
+    .movieDetails{
+        display: flex;
+        align-self: center;
+    }   
+}
