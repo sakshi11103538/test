@@ -5,3 +5,20 @@
     justify-content: center;
     align-items: center;
 }
+.buttonContainer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+.button{
+    background: black;
+    color: white;
+    border: 1ps solid black;
+    border-radius: 5px;
+    padding: 10px;
+    cursor:pointer;
+    &:hover{
+        background: white;
+        color: black;
+    }
+}

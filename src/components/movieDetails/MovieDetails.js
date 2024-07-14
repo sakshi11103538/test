@@ -1,22 +1,29 @@
-import { useParams} from 'react-router-dom'
+import { useContext } from 'react'
+import { Link, useParams} from 'react-router-dom'
 import styles from './style.module.scss'
+import { MovieContext } from '../../App'
 
-const MovieDetails = ({list}) => {
+const MovieDetails = () => {
 
     const params = useParams()
     const movieIndex = params.movieIndex
+    const {index, list} = useContext(MovieContext)
+    return <>
+        <div className={styles.container}>
+            <div>
+                <img src={list[movieIndex].category.image} alt={`${list[movieIndex].category.image} Movie Poster`} width={250} height={250}/>   
+            </div>
+            <div>
+                <div><b>{list[movieIndex].title}</b></div>
+                <div>{list[movieIndex].description}</div>
+                <div>USD {list[movieIndex].price}</div>
+            </div>
+        </div>
+        <Link to={`/`}>
+            <div className={styles.buttonContainer}><button className={styles.button}>Home</button></div>
+        </Link>
+        </>
 
-    return <div className={styles.container}>
-        <div>
-            <img src={list[movieIndex].poster_path} alt={`${list[movieIndex].title} Movie Poster`} width={400} loading="lazy"/>
-        </div>
-        <div>
-            <div>{list[movieIndex].title}</div>
-            <div>{list[movieIndex].status}</div>
-            <div>{list[movieIndex].production_companies}</div>
-        </div>
-        
-    </div>
 }
 
 export default MovieDetails

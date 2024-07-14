@@ -233,11 +233,24 @@ export const movieArray= [
     "poster_path": "https://image.tmdb.org/t/p/original//c8s4oClFPPOaTgmtBrhw0z4KnmY.jpg",
     "genres": "Drama",
     "production_companies": "kawaii",
+
     "production_countries": "Japan",
     "spoken_languages": "Japanese"
 }
 ]
 
+//git init
+//git add --all
+//git commit -m "Added infinite scrolling"
+//git remote add "origin" https://github.com/sakshi11103538/react-movie-app.git
+//git push origin -u master
+
 //<div className={styles.movieDetails}><img src={item.poster_path} alt={`${item.title} Movie Poster`} width={250} height={250}/></div>
 //<div className={styles.movieDetails}>{item.title}</div>
 //<div className={styles.movieDetails}>{item.release_date? item.release_date.split('-')[0]: 'Not Available'}</div>
+
+//movie details
+
+//<div>{list[movieIndex].title}</div>
+//<div>{list[movieIndex].status}</div>
+//<div>{list[movieIndex].production_companies}</div>
